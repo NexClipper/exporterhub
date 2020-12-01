@@ -1,8 +1,8 @@
 import React from "react";
-import { withRouter, useHistory, useLocation } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 
-const CardExporter = ({ exporter, history }) => {
+const CardExporter = ({ exporter, history, cardClick }) => {
   const {
     exporter_id,
     name,
@@ -13,12 +13,9 @@ const CardExporter = ({ exporter, history }) => {
     category
   } = exporter;
 
-  const goToDetail = id => {
-    history.push(`/detail/${id}`);
-  };
 
   return (
-    <Div onClick={() => goToDetail(exporter_id)}>
+    <Div onClick={() => cardClick(exporter_id)}>
       <header>
         <span>☆{stars}</span>
       </header>
