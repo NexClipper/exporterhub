@@ -23,7 +23,7 @@ const ContentMenu = ({ totalCount }) => {
         </Select>
         <select>
           <option>A-Z</option>
-          <option>Z-A</option>
+          <option>Z-A </option>
         </select>
       </SelectBox>
     </Div>
